@@ -1,0 +1,41 @@
+<!--
+HOE VAAK ER EEN E IN?
+
+Maak een tekst-invoerveld.
+Maak nog een tekst-invoerveld.
+Maak een knop.
+In dat invoerveld kan ik als gebruiker iets intypen.
+Dat eerste veld gebruik ik om een woord in te typen.
+
+Als ik op de knop klik, krijg ik een alert met hoe vaak de letter e er in zit.
+Zit er geen letter e in, dan gebeurd er niks.
+
+ADVANCED: in het tweede veld kan ik bepalen, van welke letter ik wil weten of die erin zit en hoe vaak.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getFrequency() {
+        var freq = 0;
+        var text = document.getElementById("invoer_2").value;
+        var Symbool = document.getElementById("Letter").value;
+        for (i=0; i<text.length;i++) {
+            if(text.charAt(i) == Symbool)
+                freq += 1;
+            } 
+        alert("Het symbool " + Symbool + " komt " + freq + " keer voor in de tekst");
+        }
+
+</script>
+<body>
+    <input type="text" id="invoer_2">
+    <input type="button" value="Zit hier een E?" onclick="getFrequency()">
+    <input type="text" id="Letter">
+</body>
+</html>

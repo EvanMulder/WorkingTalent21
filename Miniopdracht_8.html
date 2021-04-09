@@ -1,0 +1,52 @@
+<!--
+DE LENTE BEGINT!
+
+Maak 2 afbeeldingen. AFBA en AFBB
+Op het moment dat je op AFBA klikt gaat hij een seizoen verder.
+Op het moment dat AFBA op de lente komt, verschijnt er bij AFBB een foto met lammetjes.
+Als AFBA weer van de lente afgaat, verdwijnt of verandert AFBB naar een andere foto.
+Totdat je weer op lente komt.
+etc. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniOpdracht_8</title>
+</head>
+<script>
+    
+        var img_array = ["file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Winter.jpg", 
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Lente.jpg",
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Zomer.jpg",
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Herfst.jpg"]; // open afbeelding in browser en kopier webadress
+        
+        var img_array_2 = ["file:///C:/_Working_Talent/Git_proberen/Lamb_meat.jpg","file:///C:/_Working_Talent/Git_proberen/Lamb.jpg"] 
+        i = 0;
+    function Afbeelding(){
+        i++;
+        document.getElementById("myImg").src = img_array[i];
+        if (i == img_array.length - 1) {
+            i = -1;
+        }
+        if (i == 1){
+            document.getElementById("myImg_2").src = img_array_2[1];
+        }else{
+            document.getElementById("myImg_2").src = img_array_2[0];
+
+  
+        }
+    }
+
+</script>
+<body>
+    <h1>Genieten van het lammetje</h1>
+    <p>
+        <img id="myImg" onclick="Afbeelding()" src="C:\_Working_Talent\Git_proberen\Foto's Miniopdracht 6\Winter.jpg" display:inline-block style="width:400px" />
+        <img id="myImg_2" src="file:///C:/_Working_Talent/Git_proberen/Lamb_meat.jpg" display:inline-block style="width:400px" />
+    </p>
+</body>
+</html>

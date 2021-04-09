@@ -1,0 +1,66 @@
+<!--
+ZIJN DE AFBEELDINGEN HETZELFDE?
+
+Maak 2 afbeeldingen zichtbaar in je scherm. AFBA en AFBB
+Maak 3 knoppen. KNA KNB KNC
+
+KNA klik je op om AFBA door de seizoenen-afbeeldingen heen te doen.
+KNB klik je op om AFBB door de seizoenen-afbeeldingen heen te doen.
+
+Op KNC klik je EN
+- als dezelfde afbeeldingen op beide plekken staan console log je (HETZELFDE)
+- als verschillende afbeeldingen op beide plekken staan console log je (NIET HETZELFDE)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniOpdracht_7</title>
+</head>
+<script>
+    
+        var img_array = ["file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Winter.jpg", 
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Lente.jpg",
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Zomer.jpg",
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Herfst.jpg"]; // open afbeelding in browser en kopier webadress
+        i = 0;
+        x = 0
+        var Teller_1 = 0
+        var Teller_2 = 0
+    function Afbeelding(){
+        i++;
+        document.getElementById("myImg").src = img_array[i];
+        if (i == img_array.length - 1) {
+            i = -1;
+  
+        }
+    }
+    function Afbeelding_2(){
+        x++;
+        document.getElementById("myImg_2").src = img_array[x];
+        if (x == img_array.length - 1) {
+            x = -1;            
+        }
+}
+    function Afbeelding_3(){ // i en x zijn van afbeelding links en rechts en die samen controleren.
+                            
+    if(x == i){
+        console.log("beide afbeeldingen zijn hetzelfde")
+    } else{
+        console.log("beide afbeeldingen zijn anders")
+    }
+}
+</script>
+<body>
+    <h1>Genieten van elk seizoen</h1>
+    <p>
+        <img id="myImg" src="C:\_Working_Talent\Git_proberen\Foto's Miniopdracht 6\Winter.jpg" display:inline-block style="width:400px" />
+        <img id="myImg_2" src="C:\_Working_Talent\Git_proberen\Foto's Miniopdracht 6\Winter.jpg" display:inline-block style="width:400px" />
+    </p>
+    <button onclick="Afbeelding()">Afbeelding Links</button>
+    <button onclick="Afbeelding_2()">Afbeelding Rechts</button>  
+    <button onclick="Afbeelding_3()">Controleren</button> 
+</body>
+</html>

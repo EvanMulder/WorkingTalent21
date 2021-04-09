@@ -1,0 +1,47 @@
+<!--
+OP WELKE KNOPPEN IS ER EIGENLIJK GEKLIKT?
+
+Maak 4 knoppen naast elkaar.
+Op de ene knop staat A, de andere B, die daarnaast C en die daarnaast D.
+
+Op het moment dat je op knop C van de knoppen klikt verschijnt er in een div.
+U heeft op knop C geklikt.
+
+Op het moment dat je op knop D klikt verschijnt er in een div.
+U heeft op knop C geklikt.
+U heeft op knop D geklikt.
+
+Hij houd dus jouw knop-klik history bij.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function myFunction_C(){
+        var div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "20px";
+        div.innerHTML = "You clicked C";   
+    document.getElementById("main").appendChild(div);
+    }
+    function myFunction_D(){
+        var div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "20px";
+        div.innerHTML = "You clicked D";   
+    document.getElementById("main").appendChild(div);
+    }
+</script>
+<body>
+    <button onclick="myFunction()">A</button>    
+    <button onclick="myFunction()">B</button>
+    <button onclick="myFunction_C()">C</button>
+    <button onclick="myFunction_D()">D</button>
+    <div id="main"></div>
+</body>
+</html>

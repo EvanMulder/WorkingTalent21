@@ -1,0 +1,47 @@
+<!--VRIENDELIJK GROETEN
+Maak een tekst-invoerveld.
+Maak een knop.
+In dat invoerveld kan ik als gebruiker iets intypen.
+Als ik hallo intyp en dan op de knop klik komt er een alert met Welkom
+Als ik doei intyp en dan op de knop klik komt er een alert met Tot de volgende keer.
+
+https://www.w3schools.com/tags/att_input_type_text.asp
+
+In andere gevallen gebeurd er niks.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function CheckWoord(){
+        var CheckW = document.getElementById("invoer").value;
+        switch(CheckW){ // switch gebruikt om makkelijk de hoofdletter toe te voegen
+            case "hallo":
+                alert("Welkom");
+                break;
+            case "Hallo":
+                alert("Welkom");
+                break;
+            case "doei":
+                alert("Tot de volgende keer");
+                break;
+            case "Doei":
+                alert("Tot de volgende keer")
+                break;
+        }
+        
+    }
+    
+</script>
+<body>
+    <label for="invoer">Schrijf iets </label>
+    <input type="text" id="invoer">
+    <input type="button" value="click niet hier" onclick="CheckWoord()">
+    
+</body>
+</html>

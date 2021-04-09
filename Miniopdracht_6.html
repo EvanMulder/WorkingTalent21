@@ -1,0 +1,51 @@
+<!--
+ VIER SEIZOENEN, VIER AFBEELDINGEN!
+
+Maak een afbeelding zichtbaar in je scherm.
+Maak een knop.
+
+Als ik op de knop klik, verandert de afbeelding naar een nieuwe afbeelding.
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb
+
+ADVANCED: Klik door vier seizoenen heen. Plaatje van de Zomer, Herfst, Winter, Lente. 
+Na iedere winter is er 1 jaar voorbij. In de div staat na 13 keer klikken. Er zijn 3 jaren voorbij.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniOpdracht_6</title>
+</head>
+<script>
+    
+        var img_array = ["file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Winter.jpg", 
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Lente.jpg",
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Zomer.jpg",
+        "file:///C:/_Working_Talent/Git_proberen/Foto's%20Miniopdracht%206/Herfst.jpg"]; // open afbeelding in browser en kopier webadress
+        i = 0;
+        var Teller_2 = 0
+    function Afbeelding(){
+        var div = document.createElement("div");
+        i++;
+        document.getElementById("myImg").src = img_array[i];
+        if (i == img_array.length - 1) {
+            i = -1;
+            Teller_2 += 1
+            div.innerHTML = "Year is " + Teller_2;
+            document.getElementById("main").appendChild(div);   
+        }
+
+}
+</script>
+<body>
+    <h1>Genieten van elk seizoen</h1>
+    <p>
+        <img id="myImg" src="C:\_Working_Talent\Git_proberen\Foto's Miniopdracht 6\Winter.jpg" style="width:400px" />
+
+    </p>
+    <button onclick="Afbeelding()">Seizoen</button> 
+    <div id="main"></div>
+</body>
+</html>

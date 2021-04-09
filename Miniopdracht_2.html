@@ -1,0 +1,41 @@
+<!--ZIT ER EEN E IN?
+
+Maak een tekst-invoerveld.
+Maak een knop.
+In dat invoerveld kan ik als gebruiker iets intypen.
+Dat eerste veld gebruik ik om een woord in te typen.
+
+Als ik op de knop klik, krijg ik een alert als er de letter e in zit.
+Zit er geen letter e in, dan gebeurd er niks.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function checke() {
+            var txt = document.getElementById("invoer").value;
+            for (i = 0; i < txt.length; i++) {
+                if (txt.charAt(i) == 'e') {
+                    alert("Yes Sir, e is present!");
+                }                
+                if (txt.charAt(i) == 'E') {
+                    alert("Yes Sir, E is present!");
+                }
+            
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Zit hier een E?" onclick="checke()">
+    <input type="text" id="invoer">
+</body>

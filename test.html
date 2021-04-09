@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: lightgrey;
+            border: 4px solid blue;
+            display:inline-block;
+            width:100px;
+            height: 80px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <br>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeelveldEvan</title>
+    <style>
+        div{
+            background-color: rgb(148, 109, 24);
+        }
+        #speciaal{
+            background-color: rgb(104, 187, 104);
+        }
+        .mededeling:hover{
+            background-color: beige;
+            border: 2px solid red;          
+        }
+        .textje:focus{
+            width: 100px;
+            background-color: rgb(190, 182, 182);
+            border: 2px solid red;
+        }
+
+        
+        
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <p class=textje>eerste paragraaf</p>
+    <button class=textje type="button">Click Me!</button>
+    <a href="https://github.com/EvanMulder/">Visit github.com/EvanMulder/</a>
+    <div>eerste div</div>
+    <span class="mededeling">eerste span</span>
+    <h1>hoofdtitel</h1>
+    <div id="speciaal">tweede div</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function checke() {
+            var txt = document.getElementById("invoer").value;
+            for (i = 0; i < txt.length; i++) {
+                if (txt.charAt(i) == 'e') {
+                    alert("er zit een e in");
+                }
+            }
+            var dedivjes = document.getElementsByClassName("hoppa");
+            for(var x = 0; x < dedivjes.length;x++){
+                dedivjes[x].style.backgroundColor = 'red';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="check die e" onclick="checke()">
+    <input type="text" id="invoer">
+    <div>a</div>
+    <div class="hoppa">a</div>
+    <div class="hoppa">a</div>
+</body>
